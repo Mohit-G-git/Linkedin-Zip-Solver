@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZIP Solver</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-wrap">
+        <div class="logo-icon">Z</div>
+        <div>
+          <h1 class="title">ZIP Solver</h1>
+          <p class="subtitle">LinkedIn Puzzle Assistant</p>
+        </div>
+      </div>
+      <span class="badge" id="status-badge">Ready</span>
+    </header>
+
+    <!-- Info card -->
+    <div class="info-card">
+      <div class="info-row">
+        <span class="info-label">Game</span>
+        <span class="info-value" id="game-detected">Checking...</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Grid</span>
+        <span class="info-value" id="grid-size">-</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Numbers</span>
+        <span class="info-value" id="num-count">-</span>
+      </div>
+    </div>
+
+    <!-- Solve button -->
+    <button class="btn-solve" id="btn-solve" disabled>
+      <span id="btn-label">Solve Puzzle</span>
+    </button>
+
+    <!-- Steps output -->
+    <div class="steps-wrap" id="steps-wrap" hidden>
+      <p class="steps-label">Solution path</p>
+      <p class="steps-value" id="steps-value">-</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Navigate to <strong>linkedin.com/games/zip</strong> first
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

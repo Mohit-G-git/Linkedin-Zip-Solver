@@ -1,0 +1,48 @@
+/* ============================================================
+   LinkedIn ZIP Solver — Content Script Styles
+   ============================================================ */
+
+/* Animated overlay banner shown in the corner of the page */
+#zip-solver-overlay {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999999;
+
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+
+  animation: zip-solver-slide-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes zip-solver-slide-in {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.zip-solver-overlay--info {
+  background: rgba(30, 60, 120, 0.85);
+  color: #c8daff;
+  border: 1px solid rgba(100, 150, 255, 0.4);
+}
+
+.zip-solver-overlay--success {
+  background: rgba(10, 80, 40, 0.88);
+  color: #a0ffcb;
+  border: 1px solid rgba(50, 200, 100, 0.45);
+}
+
+.zip-solver-overlay--error {
+  background: rgba(100, 10, 10, 0.88);
+  color: #ffb3b3;
+  border: 1px solid rgba(255, 80, 80, 0.45);
+}
